@@ -9,29 +9,31 @@ let inputField = document.querySelector("#input");
 //console.log(inputField);
 
 
-window.addEventListener('DOMContentLoaded', function (e) {
+// window.addEventListener('DOMContentLoaded', function (e) {
 
-});
+// });
 
 
 buttonPlus.addEventListener('click', function () {
-
-
     let inputNum = parseInt(inputField.value);
+    console.log(inputNum)
     let outputNum = parseInt(numberOutput.innerHTML);
+    console.log(outputNum)
     let res = outputNum + inputNum;
+    console.log(res)
     numberOutput.innerHTML = res;
     if (res < 0) {
         numberOutput.style.color = "red"
+    } else {
+        numberOutput.style.color = "black"
     }
 });
-
 
 buttonMinus.addEventListener('click', function () {
     let inputNum = parseInt(inputField.value);
     let outputNum = parseInt(numberOutput.innerHTML);
     let res = outputNum - inputNum;
-    numberOutput.innerHTML = res;
+    numberOutput.innerHTML = res;  // output res
 
     if (res < 0) {
         numberOutput.style.color = "red"
@@ -42,7 +44,7 @@ buttonMinus.addEventListener('click', function () {
 buttonPlus.addEventListener('mouseover', function () {
     buttonPlus.style.backgroundColor = "white";
     buttonPlus.style.color = "rgb(167, 164, 164)"
-    setInterval();
+    // setInterval();
 
 })
 
@@ -64,3 +66,7 @@ setInterval(function () {
     buttonMinus.style.backgroundColor = "rgb(167, 164, 164)";
     buttonMinus.style.color = "white"
 }, 2000);
+
+
+
+
